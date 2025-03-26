@@ -1,12 +1,14 @@
 # CogniSafe: AI-Powered Detection of Online Harms
+GDG Solution Challenge 2025
 
 ## Overview
 
-CogniSafe is a Chrome extension designed to detect and flag online harms, including misinformation and negative sentiment, in real-time. With misinformation spreading six times faster than factual content (MIT, 2018), CogniSafe leverages Google’s Natural Language API and Fact Check Tools API to analyze webpages and provide immediate feedback to users. The extension integrates a Node.js backend to proxy API requests and ensures seamless, efficient detection of unreliable content.
+CogniSafe effectively addresses the problem statement by providing an AI-powered solution to detect and mitigate harmful online content in real-time. By leveraging Google's Natural Language API and Fact Check Tools API, the extension accurately analyzes webpages for misinformation and negative sentiment, ensuring users get immediate response about unreliable content. Traditional moderation methods struggle with the increasing volume and complexity of online threats, but CogniSafe enhances detection at scale by integrating machine learning and natural language processing. Additionally, the Node.js backend efficiently proxies API requests, enabling seamless and efficient content analysis. This ensures a safer browsing experience, aligning with the objective of using AI-driven solutions to combat harmful content on online platforms.
 
 ## Features
 
 - **Real-time Content Analysis**: Evaluates webpage sentiment and credibility instantly.
+- **Hate Speech Detection:** Identifies potentially harmful or offensive language.
 - **Misinformation Detection**: Checks claims against a database of 1.8M+ verified fact checks.
 - **Chrome Extension UI**: Interactive popup to analyze pages manually or automatically.
 - **Backend Proxy Server**: Securely routes requests to Google APIs using Node.js and Express.
@@ -36,7 +38,6 @@ CogniSafe is a Chrome extension designed to detect and flag online harms, includ
 ## Project File Structure
 
 ```
-/Users/gauthamkolagatla/Desktop/online-harm-detector25/
 ├── cognisafe-extension/          # Chrome extension frontend
 │   ├── manifest.json            # Extension configuration
 │   ├── background.js            # Automatic content analysis
@@ -54,12 +55,18 @@ CogniSafe is a Chrome extension designed to detect and flag online harms, includ
     ├── package-lock.json         # Auto-generated lockfile
     ├── node_modules/             # Installed dependencies
     ├── express/                  # Express module
-    ├── axios/                    # Axios module
-    └── [other submodules]        # Additional dependencies
+    └── axios/                    # Axios module
+
+[ To ensure the proper functionality of the project, install the required dependencies, including Express and Axios, by running:
+                                                          npm install
+in your terminal.This will install all necessary modules listed in package.json, enabling seamless execution of the code.]
 ```
 
-## Setup and Installation
+## Minimum Viable Product (MVP) Link
 
+As Cognisafe is a Chrome extension, its core functionality is experienced directly within the user's web browser. The primary way to demonstrate the MVP is through the provided GitHub repository (https://github.com/gauthamkola/Cognisafe.git). By following the installation instructions given, users can load the extension into their Chrome browser and directly interact with its features, observing the sentiment analysis, hate speech detection, and misinformation identification capabilities as they browse web pages. The source code within this repository represents the functional MVP of Cognisafe.
+
+## Cognisafe - Setup and Installation
 ### **Prerequisites**
 
 - **Google Chrome** (latest version)
@@ -67,30 +74,31 @@ CogniSafe is a Chrome extension designed to detect and flag online harms, includ
 - **npm** (Node Package Manager)
 - **Google Cloud API Key** (for Natural Language API & Fact Check Tools API)
 
-### **Backend Setup**
+**1. Get the Code:**
 
-1. Navigate to the backend directory:
-   ```bash
-   cd /Users/gauthamkolagatla/Desktop/online-harm-detector25/proxy-server
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the server:
-   ```bash
-   npm start
-   ```
-   - Runs the server on **[http://localhost:3000](http://localhost:3000)**.
-   - Verify by visiting **[http://localhost:3000](http://localhost:3000)** (should return "Cannot GET /", expected for POST-only routes).
+* Clone the repository: `git clone (https://github.com/gauthamkola/Cognisafe.git)`
+* Or download the ZIP and extract it.
 
-### **Extension Setup**
+**2. Load the Extension in Chrome:**
 
-1. Clone or download the repository.
-2. Open **chrome://extensions/** in Chrome.
-3. Enable **Developer mode** (top-right toggle switch).
-4. Click **Load unpacked** and select `cognisafe-extension/`.
-5. The extension will now appear in the toolbar. Pin it for easy access.
+* Open Chrome and go to `chrome://extensions/`.
+* Enable "Developer mode" (top right).
+* Click "Load unpacked."
+* Select the Cognisafe folder from your downloaded code.
+
+**3. Backend Setup:**
+
+* Navigate to the `backend` directory.
+* Run `npm install`.
+* Create a `.env` file with your Google Cloud API credentials (e.g., `GOOGLE_APPLICATION_CREDENTIALS="path/to/your/credentials.json"`).
+  [For security reasons, we have removed our Google API key from the repository.]
+* Run the backend: `npm start`.
+
+**4. Use Cognisafe:**
+
+* Browse the web.
+* Click the Cognisafe icon for analysis results.
+* Access options via the icon's right-click menu or the extensions page.
 
 ### **Configuration**
 
@@ -101,13 +109,12 @@ CogniSafe is a Chrome extension designed to detect and flag online harms, includ
 - **Backend URL**: Default is `http://localhost:3000`. Update in `background.js` and `popup.js` if needed.
 
 ## Usage
-
 ### **Automatic Analysis**
 
 1. Open a webpage (e.g., **[https://www.bbc.com/news](https://www.bbc.com/news)**).
 2. The extension analyzes content and updates the icon:
    - ✅ **Green** (Safe content)
-   - ⚠️ **Yellow** (Misinformation detected)
+   - ⚠️ **Yellow**/**Red** (Misinformation detected)
 3. Click the extension icon to view sentiment and credibility scores.
 
 ### **Manual Analysis**
@@ -116,16 +123,8 @@ CogniSafe is a Chrome extension designed to detect and flag online harms, includ
 2. Press the **"Analyze"** button in the popup.
 3. Results display webpage sentiment and potential misinformation warnings.
 
-## Debugging & Troubleshooting
-
-### **Common Issues & Fixes**
-
-| Issue                        | Solution                                                               |
-| ---------------------------- | ---------------------------------------------------------------------- |
-| "Cannot find module 'axios'" | Run `npm install` in `proxy-server/`                                   |
-| Port conflict (3000)         | Run `lsof -i :3000` and `kill -9 <PID>`, or change port in `server.js` |
-| "Connection refused" error   | Ensure backend server is running (`npm start`)                         |
-| API Key issues               | Check Google Cloud Console for valid key and permissions               |
+## **Demo Video link:**
+https://youtu.be/ge9XguVj3EQ?si=O7DP7vxljAnGv7Cz
 
 ## Future Enhancements
 
@@ -134,14 +133,13 @@ CogniSafe is a Chrome extension designed to detect and flag online harms, includ
 - **Mobile extension support** (Android & iOS browsers).
 - **Integration with Google Gemini** for enhanced AI analysis.
 
-## License
+## Team Members  
 
-This project is licensed under the **MIT License** – free to use, modify, and distribute.
+- Namratha Pavuluri  
+- Gautham Kolagatla  
+- Himanethri Kanamarlapudi  
+- Govardhini Polisetti  
 
-## Additional Files
+Built with precision and purpose, CogniSafe is our step toward a more ethical digital space. As we continue to enhance its features, we envision a future where AI-driven moderation becomes a cornerstone of online integrity.
 
-- **LICENSE**: MIT License file.
-- **.gitignore**: Excludes `node_modules/`, `.env`, and other unnecessary files from Git tracking.
-
-&#x20;
 
