@@ -111,7 +111,7 @@ As Cognisafe is a Chrome extension, its core functionality is experienced direct
 ## Usage
 ### **Automatic Analysis**
 
-1. Open a webpage (e.g., **[https://www.bbc.com/news](https://www.bbc.com/news)**).
+1. Open a webpage (e.g., **[https://www.thequint.com/]**).
 2. The extension analyzes content and updates the icon:
    - ✅ **Green** (Safe content)
    - ⚠️ **Yellow**/**Red** (Misinformation detected)
