@@ -66,6 +66,22 @@ in your terminal.This will install all necessary modules listed in package.json,
 
 As Cognisafe is a Chrome extension, its core functionality is experienced directly within the user's web browser. The primary way to demonstrate the MVP is through the provided GitHub repository (https://github.com/gauthamkola/Cognisafe.git). By following the installation instructions given, users can load the extension into their Chrome browser and directly interact with its features, observing the sentiment analysis, hate speech detection, and misinformation identification capabilities as they browse web pages. The source code within this repository represents the functional MVP of Cognisafe.
 
+Core Features:
+
+Real-Time Content Analysis – Automatically evaluates webpage sentiment and credibility.
+
+Hate Speech & Misinformation Detection – Flags harmful content and verifies claims using Google’s Fact Check API.
+
+Visual Alerts & Interactive UI – Displays reliability indicators and allows users to analyze pages manually.
+
+To see CogniSafe in action, check out the demo video [ https://youtu.be/ge9XguVj3EQ?si=O7DP7vxljAnGv7Cz ] and screenshots below:
+
+![image](https://github.com/user-attachments/assets/c3a6597a-32c1-476a-85ca-c5eb302198be)
+
+![image](https://github.com/user-attachments/assets/9a4e6e22-1286-4d7e-ad6f-b12458da745d)
+
+
+
 ## Cognisafe - Setup and Installation
 ### **Prerequisites**
 
