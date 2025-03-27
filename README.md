@@ -4,10 +4,14 @@ GDG Solution Challenge 2025
 ## Overview
 
 CogniSafe effectively addresses the problem statement by providing an AI-powered solution to detect and mitigate harmful online content in real-time. By leveraging Google's Natural Language API and Fact Check Tools API, the extension accurately analyzes webpages for misinformation and negative sentiment, ensuring users get immediate response about unreliable content. Traditional moderation methods struggle with the increasing volume and complexity of online threats, but CogniSafe enhances detection at scale by integrating machine learning and natural language processing. Additionally, the Node.js backend efficiently proxies API requests, enabling seamless and efficient content analysis. This ensures a safer browsing experience, aligning with the objective of using AI-driven solutions to combat harmful content on online platforms.
+
 💡 Why it Matters?
-🚫 Fake news influences public opinion.
-⚠️ Hate speech fuels cyberbullying.
-🔍 Users need real-time, AI-powered insights while browsing.
+
+  🚫 Fake news influences public opinion.
+
+   ⚠️ Hate speech fuels cyberbullying.
+
+   🔍 Users need real-time, AI-powered insights while browsing.
 
 CogniSafe empowers users with instant, data-backed credibility checks, ensuring they interact with trustworthy content.
 
