@@ -123,7 +123,7 @@ To see CogniSafe in action, check out the demo video [ https://youtu.be/ge9XguVj
 **4. Use Cognisafe:**
 
 * Browse the web.
-* Click the Cognisafe icon for analysis results.
+* To use the extension, wait for the webpage to load completely. Then, allow 1-2 seconds for the extension to analyze the content before clicking the extension button.
 * Access options via the icon's right-click menu or the extensions page.
 
 ### **Configuration**
